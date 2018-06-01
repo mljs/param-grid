@@ -1,9 +1,9 @@
 # param-grid
 
-  [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]
-  [![Test coverage][codecov-image]][codecov-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][codecov-image]][codecov-url]
+[![npm download][download-image]][download-url]
 
 Generate a list of possible paramaters combinations. Useful for example for hyper-paramater grid search..
 
@@ -14,17 +14,33 @@ Generate a list of possible paramaters combinations. Useful for example for hype
 ## Usage
 
 ```js
-import library from 'ml-param-grid';
+import paramGrid from 'ml-param-grid';
 
-const result = library(args);
-// result is ...
+// paramGrid is a generator function so it returns an iterator
+for(let param of paramGrid({
+  param1: ['x', 'y'],
+  param2: [4, 2],
+  param3: true
+}) {
+  console.log(param);
+};
+// result is
+// {param1 : 'x', param2: 4, param3: true}
+// {param1 : 'x', param2: 2, param3: true}
+// {param1 : 'y', param2: 4, param3: true}
+// {param1 : 'y', param2: 2, param3: true}
+
+// Get the result directly as an array
+Array.from(paramGrid({
+  p: [1, 2]
+})); // [{p: 1}, {p: 2}]
 ```
 
 ## [API Documentation](https://mljs.github.io/param-grid/)
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/ml-param-grid.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/ml-param-grid
