@@ -36,8 +36,6 @@ Array.from(paramGrid({
 })); // [{p: 1}, {p: 2}]
 ```
 
-## [API Documentation](https://mljs.github.io/param-grid/)
-
 ## License
 
 [MIT](./LICENSE)
