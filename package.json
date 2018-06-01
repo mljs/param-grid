@@ -1,13 +1,10 @@
 {
   "name": "ml-param-grid",
   "version": "0.0.0",
-  "description": "Generate a list of possible paramaters combinations. Useful for example for hyper-paramater grid search.",
+  "description":
+    "Generate a list of possible paramaters combinations. Useful for example for hyper-paramater grid search.",
   "main": "lib/index.js",
   "module": "src/index.js",
-  "files": [
-    "lib",
-    "src"
-  ],
   "scripts": {
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
