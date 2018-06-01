@@ -1,6 +1,6 @@
 {
   "name": "ml-param-grid",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description":
     "Generate a list of possible paramaters combinations. Useful for example for hyper-paramater grid search.",
   "main": "lib/index.js",
